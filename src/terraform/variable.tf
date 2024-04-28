@@ -1,35 +1,29 @@
 variable "resource_group_name" {
-  description = "The name of the resource group"
+  description = "The name of the resource group."
   type        = string
   default     = "example-resources"
 }
 
-variable "resource_group_location" {
-  description = "The location of the resource group"
+variable "location" {
+  description = "The location for all Azure resources."
   type        = string
   default     = "centralindia"
 }
 
 variable "storage_account_name" {
-  description = "The name of the storage account"
+  description = "The name of the storage account."
   type        = string
   default     = "mytfstorageaccount1"
 }
 
 variable "container_name" {
-  description = "The name of the storage container"
+  description = "The name of the storage container."
   type        = string
   default     = "myblobcontainer1"
 }
 
-variable "blob_container_access_type" {
-  description = "The access type for the blob container"
-  type        = string
-  default     = "private"
-}
-
-variable "blob_files_path" {
-  description = "The path to the directory containing blob files"
+variable "blob_directory" {
+  description = "The directory containing files to upload to Azure Blob Storage."
   type        = string
   default     = "file_uploads/"
 }
